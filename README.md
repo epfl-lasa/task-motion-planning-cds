@@ -10,7 +10,7 @@ This research was conducted in the Learning Algorithms and Systems Laboratory (L
 It was funded by the EU Project ROBOHOW.COG. ----https://robohow.eu/
 
 ###Modular Architecture Description:
-![alt tag](https://github.com/epfl-lasa/bimanual-task-motion-planning/blob/master/img/lasa-bimanual-architecture.png
+![alt tag](https://github.com/epfl-lasa/task-motion-planning-cds/blob/bare/img/lasa-architecture.png)
 
 Following a brief run-through of the architecture:
 
