@@ -1,15 +1,15 @@
 ## Task and Motion Planning with CDS Learned from Demonstrations
 This repository includes the packages and instructions to run the LASA Motion planning architecture developed initially for a pizza dough rolling task within the Robohow project, but can be used for any task and any type of controller that outputs the desired command in task space (i.e. desired cartesian pose/ft/stiffness)
 
-###Video of the architecture in action (click on image):
+### Video of the architecture in action (click on image):
 <div style="text-align:center">
-[![Task and Motion Planning using CDS Architecture used to Roll Pizza Dough](http://img.youtube.com/vi/br5PM9r91Fg/0.jpg)](http://www.youtube.com/watch?v=br5PM9r91Fg)
+![Task and Motion Planning using CDS Architecture used to Roll Pizza Dough](http://img.youtube.com/vi/br5PM9r91Fg/0.jpg)](http://www.youtube.com/watch?v=br5PM9r91Fg)
 
 This research was conducted in the Learning Algorithms and Systems Laboratory (LASA) at the Swiss Federal Institute of Technology in Lausanne (EPFL) under the supervision of Prof. Aude Billard.  ---- http://lasa.epfl.ch/
 
 It was funded by the EU Project ROBOHOW.COG. ----https://robohow.eu/
 
-###Modular Architecture Description:
+### Modular Architecture Description:
 ![alt tag](https://github.com/epfl-lasa/task-motion-planning-cds/blob/bare/img/lasa-architecture.png)
 
 Following a brief run-through of the architecture:
@@ -21,21 +21,21 @@ Following a brief run-through of the architecture:
   - **Cartesian to Joint State Transformer:** This module takes the desired end-effector com-mand (pose, force/torque) and converts it to joint velocities and stiffness. --- (Using IKSolver implemented in [robot-toolkit](https://github.com/epfl-lasa/robot-toolkit)) ---
   - **Joint to Cartesian State Estimator:** This module estimates the end-effector pose and force/torque from the joint angle/torques provided by the low-level controller. --- (Using FwdKinematics implemented in [robot-toolkit](https://github.com/epfl-lasa/robot-toolkit))) ---
   
-###Usage in your own projects:
+### Usage in your own projects:
 Using this **modular architecture**, one can easily simulate and test their own controllers and experiments. As the modules are not tied to each other, one can implement their own motion planner/policy controller in task space and execute it on a simulation or on a real robot with only using the corresponding topics, the state transformers/simulator or kuka_fri_bridge will take care of the rest. An example of these module being used to simulate and control actions can be found in this package:  [kuka_planning_interface ](https://github.com/nbfigueroa/kuka_planning_interface)
 
 Also, if one chooses to use their own inverse kinematics/dynamics solvers on can send topics directly to the kuka_fri_bridge which works as a bridge to the KUKA control box. 
 
 ---
-###Installation:
+### Installation:
 
-####System Requirements:
+#### System Requirements:
 
 OS: Ubuntu 14.04
 
 ROS compatibility: Indigo
 
-####Instructions:
+#### Instructions:
 
 For **each package/repo** listed below, the user needs to do the following:
 
@@ -49,7 +49,7 @@ $ git clone <remote branch>
 $ cd /catkin_ws/
 $ catkin_make
 ```
-####Package list:
+#### Package list:
   1. [kuka-rviz-simulation](https://github.com/epfl-lasa/kuka-rviz-simulation):
   ```
   $ git clone https://github.com/epfl-lasa/kuka-rviz-simulation.git
@@ -74,15 +74,15 @@ $ catkin_make
   
 ---  
 
-###Simulation of a Pouring task in Rviz:
+### Simulation of a Pouring task in Rviz:
 
-#####Robot Simulator
+##### Robot Simulator
 ```
 $ roslaunch kuka_lwr_bringup lwr_simulation.launch
 ```
 
 
-#####Control/Motion Planning
+##### Control/Motion Planning
 Cartesian-to-Joint/Joint-to-Cart Estimation
 ```
 $ roslaunch state_transformers pouring_ctrls_sim.launch
@@ -111,20 +111,20 @@ then follow the instructions on the terminal of this node.
 
 ---  
 
-###Real-Time Control of a Pouring task on the KUKA LWR @ LASA:
+### Real-Time Control of a Pouring task on the KUKA LWR @ LASA:
 
 
-#####Robot State Communication
+##### Robot State Communication
 Bringup ```kuka_fri_bridge``` (a custom KUKA control bridge using FRI library) check instructions to run [here](https://github.com/nbfigueroa/kuka_interface_packages.git).
 ```
 $ rosrun kuka_fri_bridge run_lwr.sh
 ```
-#####Real-time Robot Visualization
+##### Real-time Robot Visualization
 ```
 $ roslaunch kuka_lwr_bringup lwr_realtime_viz.launch
 ```
 
-#####Control/Motion Planning
+##### Control/Motion Planning
 Cartesian-to-Joint/Joint-to-Cart Estimation
 ```
 $ roslaunch state_transformers pouring_ctrls_real.launch
@@ -145,7 +145,7 @@ The robot will then follow the learned pouring trajectories: [Pouring Trajectori
 
 
 --- 
-###References:
+### References:
 
 [1] N. Figueroa and A. Billard, “Discovering hierarchical structure in heterogenous and sequential task demonstrations,” In preparation.
 
