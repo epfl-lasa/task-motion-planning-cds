@@ -3,10 +3,9 @@ This repository includes the packages and instructions to run the LASA Motion pl
 
 ### Video of the architecture in action (click on image):
 <div style="text-align:center">
-[![Task and Motion Planning using CDS Architecture used to Roll Pizza Dough](.)](https://www.youtube.com/watch?v=ek1j272iAmc)
-
-
 ![](https://j.gifs.com/pg5Y3y.gif)
+![youtube link](https://www.youtube.com/watch?v=ek1j272iAmc)
+
 
 This research was conducted in the Learning Algorithms and Systems Laboratory (LASA) at the Swiss Federal Institute of Technology in Lausanne (EPFL) under the supervision of Prof. Aude Billard.  ---- http://lasa.epfl.ch/
 
