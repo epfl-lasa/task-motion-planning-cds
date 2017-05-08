@@ -149,7 +149,7 @@ The robot will then follow the learned pouring trajectories: [Pouring Trajectori
 --- 
 ### References:
 
-[1] N. Figueroa and A. Billard, “Discovering hierarchical structure in heterogenous and sequential task demonstrations,” In preparation.
+[1] N. Figueroa and A. Billard, “Transform-Invariant Non-Parametric Clustering of Covariance Matrices and its Application to Unsupervised Joint Segmentation and Action Discovery,” In preparation.
 
 [2] A. L. Pais, K. Umezawa, Y. Nakamura, and A. Billard, “Task parametrization using continuous constraints extracted from human demonstrations,” Accepted, IEEE TRO, 2015.
 
