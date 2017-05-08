@@ -3,7 +3,9 @@ This repository includes the packages and instructions to run the LASA Motion pl
 
 ### Video of the architecture in action (click on image):
 <div style="text-align:center">
+
 ![](https://j.gifs.com/pg5Y3y.gif)
+
 ![youtube link](https://www.youtube.com/watch?v=ek1j272iAmc)
 
 
